@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body{
+  background-image: url(p4.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+header {
+     position: fixed;
+     width: 100%; 
+     top:0;
+     right: 0;
+     z-index: 1000;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 20px 100px;
+     transition: 0.5s;
+}
+.conatiner{
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.navbar {
+   display: flex;
+   column-gap: 5rem;
+   align-items: left; 
+}
+.navbar li{
+  position: relative;
+}
+.navbar a{
+  font-size: 1rem;
+  font-weight: 500;
+  color: red;
+}
+navbar a::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.4s all linear;
+}
+navbar a:hover::after,
+.navbar .home-active::after {
+  width: 100%;
+}
+.btn {
+  width: 5%;
+  padding: 0.5rem;
+  background: red;
+  color: white;
+  font-weight: 400;
+  border-radius: 0.5rem;
+}
+btn:hover {
+  background: red;
+}
+.logo{
+  width: 140px;
+  cursor: pointer;
+  align-items: left;
+}
+.content{
+  width: 100%;
+  position: absolute;
+  top: 30%;
+}
+.left-col{
+  margin-left: 6%;
+}
+.left-col h1{
+  font-size: 90px;
+  color: white;
+  line-height: 110px;
+  float: left;
+}
+.right-col{
+  float: left;
+  margin-left: 20%;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+}
+.right-col p{
+  font-size: 18px;
+  color: red;
+  font-weight: 400;
+  margin-right: 15px;
+}
+#icon{
+  width: 80px;
+  cursor: pointer;
+}
+.loader {
+  border: 25px solid black;
+  border-top: 25px solid cyan;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 2s linear infinite;
+  align: center;
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
